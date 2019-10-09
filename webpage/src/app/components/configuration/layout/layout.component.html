@@ -1,0 +1,23 @@
+<div class="content">
+
+    <div class="row">
+        <div class="column animation1">
+            <button class="buttonStyle" mat-raised-button (click)="addLayout()" color="primary">Add</button>
+        </div>
+    </div>
+
+    <div *ngFor="let l of layoutPile; index as i" class="row">
+        <mat-form-field class="column" *ngIf="components.length > 0">
+            <mat-select placeholder="Component" [(ngModel)]="l" (selectionChange)="onSelectionComponentChange(l,i)">
+                <mat-option *ngFor="let c of components" [value]="c">{{c.nameLabel}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="column animation1" *ngIf="components.length > 0">
+            <button class="buttonStyle" mat-raised-button (click)="removeLayout(i)" color="warn">Remove</button>
+        </div>
+    </div>
+
+    <div class="error" *ngIf="components?.length == 0 && layoutPile?.length > 0">Nenhum componente selecionado!</div>
+
+
+</div>

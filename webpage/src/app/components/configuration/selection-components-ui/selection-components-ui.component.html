@@ -1,0 +1,17 @@
+<div class="cardPool">
+
+    <div class="card card-container" *ngFor="let c of componentsUI" (click)="setComponent(c.component)">
+        <h3>{{c.name}}</h3>
+        <div class="card card-image">
+                <img [src] = "c.icon">
+        </div>        
+    </div>    
+          
+</div>
+
+
+<div class="cardPool">
+        <div class="card card-device" (click)="openDialog(i)" [ngClass]="(c.valid) ? 'valid' : 'error' " *ngFor="let c of components,let i =index">{{c.nameLabel}}</div>
+</div>
+
+    

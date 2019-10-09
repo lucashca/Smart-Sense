@@ -1,0 +1,55 @@
+
+
+<div class="titleBar">Componet</div>
+   
+
+<div class="content">
+    <div class="row">
+        <mat-form-field class="column" >
+            <mat-select placeholder="Devices" [formControl]="devicesForm" (selectionChange)="onSelectionDeviceChange()">
+                <mat-option *ngFor="let d of devices" [value]="d">{{d.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div *ngIf="componentsUI.device">
+        <div class="row">
+            <mat-form-field class="column">
+                <input matInput placeholder="Name"  [(ngModel)]="componentsUI.nameLabel"  name ="id">
+            </mat-form-field>  
+        </div>
+        <div class="row">
+            <mat-form-field class="column" >
+                <textarea matInput placeholder="Description" [(ngModel)]="componentsUI.description" name ="componentsUI.description"></textarea>
+            </mat-form-field> 
+        </div>
+      
+        <div class="row">
+            <mat-form-field class="column" *ngFor="let i of numberOfPortsIN; ">
+                <mat-select placeholder="Data IN {{i+1}} - Route" [(ngModel)]="componentsUI.dataIN[i]">
+                    <mat-option *ngFor="let d of componentsUI.device.dataOUT" [value]="d">{{d.dataID}} - {{d.dataPath}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>  
+        <div class="row">
+                <mat-form-field class="column" *ngFor="let i of numberOfPortsOUT; ">
+                    <mat-select placeholder="Data OUT {{i+1}} - Route"  [(ngModel)]="componentsUI.dataOUT[i]">
+                        <mat-option *ngFor="let d of componentsUI.device.dataIN" [value]="d">{{d.dataID}} - {{d.dataPath}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>    
+        <div class="row">
+            <div class="column animation1">
+                    <button mat-raised-button (click)="onCancel()" color="warn">Cancel</button>
+            </div>
+            <div class="column animation1" >
+                    <button mat-raised-button (click)="onConfirm()" color="primary">Confirm</button>
+            </div>
+          
+        </div>   
+        
+      
+        
+    </div>
+
+</div>
+

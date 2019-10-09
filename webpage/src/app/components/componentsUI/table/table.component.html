@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="titleBar">{{component.nameLabel}}</div>
+
+    <div class="content">
+        <table *ngIf="data">
+            <tr *ngFor="let d of data;index as i">
+                <td>{{component.dataIN[i].dataID}}</td>
+                <td>{{d}}</td>
+            </tr>
+        </table>
+    </div>
+    <mat-icon class="help" (click)="info = !info">help</mat-icon>
+    <div class="help-message" *ngIf="info">{{ component.description }}</div>
+
+</div>

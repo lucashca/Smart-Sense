@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="titleBar">{{component.nameLabel}}</div>
+    <div class="row">
+
+        {{data}}
+
+    </div>
+
+    <mat-icon class="help" (click)="info = !info">help</mat-icon>
+    <div class="help-message" *ngIf="info">{{ component.description }}</div>
+
+</div>

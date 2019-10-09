@@ -1,0 +1,9 @@
+<app-rts-chart *ngIf="component.componentType == 'real-time-chart'" [component]="component"></app-rts-chart>
+
+<app-action-button *ngIf="component.componentType == 'action-button'" [component]="component"></app-action-button>
+
+<app-campo-dados *ngIf="component.componentType == 'data-field'" [component]="component"></app-campo-dados>
+
+<app-table *ngIf="component.componentType == 'table'" [component]="component"></app-table>
+
+<app-action-field *ngIf="component.componentType == 'action-field'" [component]="component"></app-action-field>

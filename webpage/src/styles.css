@@ -1,0 +1,166 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+
+.centerRow{
+  width: auto;
+  align-self: center;
+  
+}
+.help:hover {
+  cursor: pointer;
+}
+.help-message {
+  background: #05b38d;
+  padding: 10px;
+  border-radius: 5px;
+}
+.titleBar {
+  height: 50px;
+  font-size: 19px;
+  background-color: #7197ff;
+  display: flex;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.buttonStyle {
+  width: 20%;
+  min-width: 100px;
+  max-width: 150px;
+  height: 50px;
+}
+
+.container {
+  min-height: 90%;
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 5%;
+  padding: 16px;
+  background: #fefefe;
+  box-shadow: -5px 5px 5px 5px #aaaaaa;
+}
+
+.content {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.canvas-painel {
+  margin-left: 5%;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.basic-container {
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+
+.cardPool {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  border-radius: 4px;
+  height: 15px;
+  width: 50px;
+  margin: 5px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+  box-shadow: -2px 2px 2px 2px #aaaaaa;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 4px 17px rgba(black, 0.35);
+  cursor: pointer;
+}
+
+.animation1 {
+  transition: all 0.2s ease-in-out;
+}
+.animation1:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(black, 0.35);
+  cursor: pointer;
+}
+
+.card-device {
+  width: 100px;
+  background-color: #3f51b5;
+  color: #fff;
+}
+
+.card-image {
+  height: 100px;
+  width: 100px;
+  background-color: #fff;
+  color: #fff;
+  padding: 0px;
+  box-shadow: -1px 1px 1px 1px #aaaaaa;
+}
+
+.card-image img {
+  height: 100px;
+  width: 100px;
+}
+
+.card-container {
+  height: 150px;
+  width: 150px;
+  flex-direction: column;
+  background-color: #7197ff;
+  color: #fff;
+}
+.painel {
+  background-color: #ebebeb;
+  padding: 10px;
+  border: 2px solid rgb(0, 14, 44);
+  border-radius: 5px;
+}
+
+.valid {
+  background-color: #05b38d;
+}
+
+.error {
+  background-color: #cc4646;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 5px;
+}

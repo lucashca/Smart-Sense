@@ -1,0 +1,42 @@
+
+<div class="titleBar">Device</div>
+   
+<div class="content">
+    <div class="row">
+        <mat-form-field class="column">
+            <input matInput placeholder="Name" disabled  [(ngModel)]="device.name"  name ="name">
+        </mat-form-field> 
+        <mat-form-field class="column">
+            <input matInput placeholder="Id" disabled  [(ngModel)]="device.id"  name ="id">
+        </mat-form-field>      
+    </div>
+    <div class="row">
+        <mat-form-field class="column">
+            <input matInput placeholder="Manufacturer" disabled  [(ngModel)]="device.manufacturer"  name ="manufacturer">
+        </mat-form-field> 
+        <mat-form-field class="column">
+            <input matInput placeholder="Route" disabled  [(ngModel)]="device.mainRoute"  name ="mainRoute">
+        </mat-form-field>      
+    </div>
+    <div class="row">
+        <mat-form-field class="column">
+            <mat-select placeholder="Data IN - Route" >
+                <mat-option *ngFor="let d of device.dataIN" [value]="d">{{d.dataID}} - {{d.dataPath}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="column">
+            <mat-select placeholder="Data OUT - Route" >
+                <mat-option *ngFor="let d of device.dataOUT" [value]="d">{{d.dataID}} - {{d.dataPath}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>   
+    <div class="row">
+        <mat-form-field class="column" >
+            <textarea matInput placeholder="Description" [(ngModel)]="device.description" name ="description" disabled></textarea>
+           
+        </mat-form-field> 
+    </div>
+    
+</div>
+

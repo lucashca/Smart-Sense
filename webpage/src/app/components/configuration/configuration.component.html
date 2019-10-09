@@ -1,0 +1,28 @@
+<div class="container">
+
+    <mat-tab-group #tabGroup (selectedTabChange)="printTab(tabGroup)">
+        <mat-tab label="Devices">
+            <div class="content">
+                <app-select-devices [devices]="devices"></app-select-devices>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Components">
+            <div class="content">
+                <app-selection-components-ui [devices]="devices" [components]="components"
+                    (componentsData)="setComponent($event)">
+                </app-selection-components-ui>
+                <button class="buttonStyle" mat-raised-button (click)="setComponents()"
+                    color="primary">Confirmar</button>
+            </div>
+        </mat-tab>
+        <mat-tab label="Layout">
+            <div class="content" *ngIf="this.tabGroup._selectedIndex == 2">
+                <app-layout [components]="components" [layoutPile]="layoutPile"></app-layout>
+                <button class="buttonStyle" mat-raised-button (click)="setLayout()" color="primary">Confirmar</button>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="titleBar">{{component.nameLabel}}</div>
+
+    <div>
+        <div class="row">
+            <mat-form-field class="column">
+                <input matInput placeholder="{{component.nameLabel}}" [(ngModel)]="data" name="data">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <div class="column animation1">
+                <button mat-raised-button color="primary">Send</button>
+            </div>
+        </div>
+    </div>
+    <mat-icon class="help" (click)="info = !info">help</mat-icon>
+    <div class="help-message" *ngIf="info">{{ component.description }}</div>
+</div>

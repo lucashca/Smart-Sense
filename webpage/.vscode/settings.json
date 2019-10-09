@@ -1,0 +1,5 @@
+{
+    "editor.formatOnSave": true,
+    "typescript.preferences.quoteStyle": "double",
+    "javascript.preferences.quoteStyle": "double"
+}

@@ -1,0 +1,30 @@
+
+
+
+<div class="loginBackground">
+<div class="container">
+    <div class="titleBar">Login</div>
+    
+
+    <div class="content">
+        <div >
+            <div class="row">
+                <mat-form-field class="column">
+                    <input matInput placeholder="Username"  [(ngModel)]="user.name"  name ="username">
+                </mat-form-field>  
+            </div>
+            <div class="row">
+                <mat-form-field class="column">
+                    <input matInput placeholder="Password" type="password" [(ngModel)]="user.password"  name ="password">
+                </mat-form-field>  
+            </div>
+            <div class="row">
+                <div class="column animation1" >
+                        <button mat-raised-button (click)="login()" color="primary">Login</button>
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>
+</div>
+
