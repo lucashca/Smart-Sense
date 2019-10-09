@@ -21,7 +21,9 @@ export class ActionFieldComponent implements OnInit {
 
 
   sendCommand() {
-    this.appServices.sendCommandToDevice(this.component.device, this.component.dataOUT[0]);
+    console.log("Entrou")
+    this.appServices.sendCommandToDevice(this.component.device, this.component.dataOUT[0], this.data).subscribe(
+    );
   }
 
 }
