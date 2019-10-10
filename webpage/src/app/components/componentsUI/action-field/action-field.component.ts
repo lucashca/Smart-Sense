@@ -13,7 +13,11 @@ export class ActionFieldComponent implements OnInit {
 
   @Input() component: ComponentUI;
 
-  data: any;
+  data: any = "Olá mundo";
+
+  print() {
+    console.log(this.data)
+  }
 
   ngOnInit() {
     console.log(this.component)

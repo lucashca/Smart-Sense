@@ -4,7 +4,8 @@
     <div>
         <div class="row">
             <mat-form-field class="column">
-                <input matInput placeholder="{{component.nameLabel}}" [(ngModel)]="data" name="data">
+                <input matInput placeholder="{{component.nameLabel}}" (ngModelChange)="print()" [(ngModel)]="data"
+                    name="data">
             </mat-form-field>
         </div>
         <div class="row">
