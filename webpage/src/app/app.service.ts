@@ -14,9 +14,9 @@ export class AppService {
   constructor(private http: HttpClient) { }
 
 
-  sendCommandToDevice(device: Device, commad: CommandRoute) {
+  sendCommandToDevice(device: Device, commad: CommandRoute, data: any = null) {
     let url = this.serverURL + "sendCommand"
-    return this.http.post(url, { device: device, commad: commad }).pipe(
+    return this.http.post(url, { device: device, commad: commad, data: data }).pipe(
       timeout(1000)
     );
   }

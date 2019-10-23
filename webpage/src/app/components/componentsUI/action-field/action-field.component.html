@@ -4,12 +4,13 @@
     <div>
         <div class="row">
             <mat-form-field class="column">
-                <input matInput placeholder="{{component.nameLabel}}" [(ngModel)]="data" name="data">
+                <input matInput placeholder="{{component.nameLabel}}" (ngModelChange)="print()" [(ngModel)]="data"
+                    name="data">
             </mat-form-field>
         </div>
         <div class="row">
             <div class="column animation1">
-                <button mat-raised-button color="primary">Send</button>
+                <button mat-raised-button (click)="sendCommand()" color="primary">Send</button>
             </div>
         </div>
     </div>

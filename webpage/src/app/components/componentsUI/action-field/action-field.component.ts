@@ -13,7 +13,11 @@ export class ActionFieldComponent implements OnInit {
 
   @Input() component: ComponentUI;
 
-  data: any;
+  data: any = "Olá mundo";
+
+  print() {
+    console.log(this.data)
+  }
 
   ngOnInit() {
     console.log(this.component)
@@ -21,7 +25,9 @@ export class ActionFieldComponent implements OnInit {
 
 
   sendCommand() {
-    this.appServices.sendCommandToDevice(this.component.device, this.component.dataOUT[0]);
+    console.log("Entrou")
+    this.appServices.sendCommandToDevice(this.component.device, this.component.dataOUT[0], this.data).subscribe(
+    );
   }
 
 }
