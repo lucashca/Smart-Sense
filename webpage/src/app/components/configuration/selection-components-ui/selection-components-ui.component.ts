@@ -50,6 +50,7 @@ export class SelectionComponentsUIComponent implements OnInit {
       if (result) {
         this.components[id] = result;
         this.componentsData.emit(this.components);
+        console.log(this.components)
         console.log("emitido");
       }
     });

@@ -14,16 +14,16 @@ export class AppService {
   constructor(private http: HttpClient) { }
 
 
-  sendCommandToDevice(device: Device, commad: CommandRoute, data: any = null) {
+  sendCommandToDevice(device: Device, command: CommandRoute, data: any = null) {
     let url = this.serverURL + "sendCommand"
-    return this.http.post(url, { device: device, commad: commad, data: data }).pipe(
+    return this.http.post(url, { device: device, command: command, data: data }).pipe(
       timeout(1000)
     );
   }
 
-  getData(device: Device, commad: CommandRoute) {
+  getData(device: Device, command: CommandRoute) {
     let url = this.serverURL + 'getData';
-    return this.http.post(url, { device: device, commad: commad }).pipe(
+    return this.http.post(url, { device: device, command: command }).pipe(
       timeout(1000)
     );
   }

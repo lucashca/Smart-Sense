@@ -14,7 +14,7 @@ export class CampoDadosComponent implements OnInit {
 
 
   @Input() component: ComponentUI;
-  data: String = "Defult Data"
+  data: String = "Default Data"
 
 
   constructor(private appServices: AppService) { }
@@ -40,7 +40,7 @@ export class CampoDadosComponent implements OnInit {
   }
 
   getData() {
-    this.appServices.getData(this.component.device, this.component.dataOUT[0]).subscribe((res) => {
+    this.appServices.getData(this.component.device, this.component.dataIN[0]).subscribe((res) => {
       this.data = "" + res;
     })
   }

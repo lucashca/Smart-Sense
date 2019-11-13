@@ -40,6 +40,7 @@ export class HomeComponent implements OnInit {
   getLayout() {
     this.confiugrationService.getLayout().subscribe((res: ComponentUI[]) => {
       this.layout = res
+      console.log("Layout");
       console.log(this.layout)
     });
   }
