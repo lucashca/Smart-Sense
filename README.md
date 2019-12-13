@@ -10,48 +10,48 @@ v10.17.0, porém versões mais recentes deverão funcionar.
 
 Após a instalação verifique se o npm esta instalado pelo seguinte comando
 
-#npm --v
+# npm --v
 
 Se estiver irá aparecer uma mensagem informando a versão, se não instale com o seguinte comando.
 
-#sudo apt-get install npm
+# sudo apt-get install npm
 
 Atualize-o com o seguinte comando 
 
-#npm install -g npm
+# npm install -g npm
 
 Com o node e o npm instalado é necessário instalar o angular para executar o sistema web
 
-#npm install -g @angular/cli@8.1.1
+# npm install -g @angular/cli@8.1.1
 
 Para execudar o sistema web, entre na pasta webpage e execute os seguintes comandos
 
 Somente na primeira vez
-#npm install 
+# npm install 
 
 Para executar
-#npm start
+# npm start
 
 Para iniciar o servidor, entre na pasta server e execute os seguintes comandos
 
 Somente na primeira vez
-#npm install 
+# npm install 
 
 Para executar
-#npm start
+# npm start
 
 Algumas configurações de ip podem ser necessárias, estas ficam no arquivo /webpage/src/app.service.ts. 
 Por padão o servidor foi definido no endereço: 
 
-#http://localhost:3000
+# http://localhost:3000
 
-##Para a utilização da biblioteca do esp
+# Para a utilização da biblioteca do esp
 
 Instale o módulo esp para o arduino, é necessário a versão mais recente do Arduino IDE
 
 Acesse o menu Arquivo > Preferências. Na janela que abrir vá até a opção Adittional Boards Manager URL’s e insira a URL
 
-#http://arduino.esp8266.com/stable/package_esp8266com_index.json. 
+# http://arduino.esp8266.com/stable/package_esp8266com_index.json. 
 Em seguida clique no botão OK.
 Agora acesse o menu Ferramentas > Placa e selecione a opção Boards Manager.
 Na janela que abrir, role a barra de rolagem até encontrar o pacote “esp8266 by ESP8266 Community”. 
@@ -62,7 +62,7 @@ Tuturial similar: https://blogmasterwalkershop.com.br/embarcados/nodemcu/nodemcu
 
 O código depende da seguinte biblioteca
 
-#ArduinoJson  v5.13.5
+# ArduinoJson  v5.13.5
 
 Esta pode ser instalada em Ferramentas > Gerenciador de Biblioteca
 
@@ -90,20 +90,20 @@ deve ser implementado de modo que ele suporte os comandos pela comunicação ser
 
 O padrão da mensagem é composto pela chave e valor.
 
-#key:val
+# key:val
 
 Onde a chave será um comando informado na função initDevice, 
 no código acima temos as chaves dos dados de entrada para o arduino e dos dados de saída do mesmo.
 
 O comando que o servidor irá enviar para o esp será, por exemplo:
 
-#setPoint:500
+# setPoint:500
 
 Este será enviado como um comando para o arduino.
 O comando de requisição dos dados será:
 
-#ldrValue:0
-#ledPower:0
+# ldrValue:0
+# ledPower:0
 
 O esp coletará os dados dessa chave e enviará para o servidor.
 
