@@ -6,8 +6,8 @@
 
 
 #ifndef STASSID
-#define STASSID "Valesig"
-#define STAPSK  "verilu141094"
+#define STASSID "lucas"
+#define STAPSK  "123456789"
 #endif
 
 const char* ssid = STASSID;
@@ -43,8 +43,8 @@ struct Device d;
 
 
 
-IPAddress ip(192, 168, 0, 10); // where xx is the desired IP Address
-IPAddress gateway(192, 168, 0, 1); // set gateway to match your network
+IPAddress ip(192, 168, 43, 10); // where xx is the desired IP Address
+IPAddress gateway(192, 168, 43, 1); // set gateway to match your network
 IPAddress subnet(255, 255, 255, 0); // set subnet mask to match your network 
 void setup(void) {
   initDevice(ip);
@@ -83,7 +83,7 @@ void loop(void) {
 
 void initDevice(const IPAddress& ipAddress){
   String ip = String(ipAddress[0]) + String(".") +String(ipAddress[1]) + String(".") +String(ipAddress[2]) + String(".") + String(ipAddress[3])  ;
-  d.nome = "Arduino Test";
+  d.nome = "SmartLume";
   d.id = "1";
   d.manufacturer = "Arduino Device";
   d.route = ip;  

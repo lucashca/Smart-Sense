@@ -138,6 +138,7 @@ class App {
       }
 
       let d = new Device(body.id, body.name, body.manufacturer, body.route, "", dIn, dOut)
+      console.log(d)
       this.devices.push(d)
 
     });
